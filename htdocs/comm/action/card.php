@@ -1173,7 +1173,7 @@ if (empty($reshook) && GETPOST('actionmove', 'alpha') == 'mupdate') {
 	//print dol_print_date($datep, 'dayhour');exit;
 
 	if ($datep != $object->datep) {
-		if (!empty($object->datef)) {
+		if (!empty($object->datef) && $object->datef !== null) {
 			$object->datef += $datep - $object->datep;
 		}
 		$object->datep = $datep;
